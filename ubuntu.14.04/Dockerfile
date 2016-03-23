@@ -29,6 +29,6 @@ RUN apt-get update && apt-get install -y \
  ant \
  ant-optional \
  maven \
- emacs
+ emacs24-nox
 
 CMD ["bash"]
