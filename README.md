@@ -8,7 +8,7 @@ This is NOT docker images for ZooKeeper itself. :-)
 
 Typically you'll run the image like:
 
-docker run -it --name &lt;NAME> /Users/$USER/dev/zookeeper-br34:/root/zookeeper &lt;IMAGE> bash
+docker run -it --name &lt;NAME> -v /Users/$USER/dev/zookeeper-br34:/root/zookeeper &lt;IMAGE> bash
 
 Notice the use of volumes to map a ZooKeeper working directory into the container. We're running a bash command from which you can compile/run/test/etc... as appropriate.
 
