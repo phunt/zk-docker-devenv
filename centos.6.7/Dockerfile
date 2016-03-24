@@ -14,6 +14,7 @@ ENV PATH $JAVA_HOME/bin:$PATH
 RUN yum install -y \
  gcc gcc-c++ make openssl-devel \
  tar \
+ unzip \
  python \
  automake \
  autoconf \
@@ -31,6 +32,9 @@ RUN cd /opt && wget http://www-us.apache.org/dist//ant/binaries/apache-ant-1.9.6
 
 # Install mvn
 RUN cd /opt && wget http://www-us.apache.org/dist/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz && tar -xaf apache-maven-3.3.9-bin.tar.gz && ln -s /opt/apache-maven-3.3.9/bin/mvn /usr/local/bin/mvn
+
+# Install JCE policy file
+RUN cd ~ && wget --no-cookies --no-check-certificate --header "Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com%2F; oraclelicense=accept-securebackup-cookie" "http://download.oracle.com/otn-pub/java/jce/7/UnlimitedJCEPolicyJDK7.zip" && unzip UnlimitedJCEPolicyJDK7.zip && cp UnlimitedJCEPolicy/*.jar $JAVA_HOME/jre/lib/security/.
 
 RUN yum clean all
 
