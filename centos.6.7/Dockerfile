@@ -20,8 +20,14 @@ RUN yum install -y \
  autoconf \
  libcppunit-dev \
  subversion \
- git \
  libtool
+
+# Install a reasonably recent version of git
+RUN yum install -y \
+ curl-devel expat-devel gettext-devel openssl-devel zlib-devel \
+ gcc perl-ExtUtils-MakeMaker
+
+RUN cd /opt && wget https://www.kernel.org/pub/software/scm/git/git-2.8.2.tar.gz && tar xzf git-*.tar.gz && cd git-* && make prefix=/usr/local all && make prefix=/usr/local install
 
 # Install the other tools we need
 RUN yum install -y \
