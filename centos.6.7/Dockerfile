@@ -34,7 +34,7 @@ RUN yum install -y \
  emacs-nox
 
 # Install Ant - centos 6 is on a very old version
-RUN cd /opt && wget http://www-us.apache.org/dist//ant/binaries/apache-ant-1.9.6-bin.tar.gz && tar -xaf apache-ant-1.9.6-bin.tar.gz && ln -s /opt/apache-ant-1.9.6/bin/ant /usr/local/bin/ant
+RUN cd /opt && wget https://archive.apache.org/dist/ant/binaries/apache-ant-1.9.7-bin.tar.gz && tar -xaf apache-ant-1.9.7-bin.tar.gz && ln -s /opt/apache-ant-1.9.7/bin/ant /usr/local/bin/ant
 
 # Install mvn
 RUN cd /opt && wget http://www-us.apache.org/dist/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz && tar -xaf apache-maven-3.3.9-bin.tar.gz && ln -s /opt/apache-maven-3.3.9/bin/mvn /usr/local/bin/mvn
