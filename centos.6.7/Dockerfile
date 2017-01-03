@@ -2,6 +2,8 @@ FROM centos:6.7
 
 RUN yum clean all
 
+RUN yum install -y yum-plugin-ovl
+
 RUN yum install -y wget which
 
 # Install Java.
