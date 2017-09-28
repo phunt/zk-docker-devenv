@@ -4,6 +4,7 @@ FROM ubuntu:17.04
 RUN apt-get update && apt-get upgrade -y && apt-get install -y \
  build-essential \
  python \
+ python-dev \
  software-properties-common \
  automake \
  autoconf \
@@ -11,7 +12,8 @@ RUN apt-get update && apt-get upgrade -y && apt-get install -y \
  subversion \
  git \
  libtool \
- wget
+ wget \
+ cmake
 
 # Install Java.
 RUN \
