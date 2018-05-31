@@ -14,7 +14,8 @@ RUN apt-get update && apt-get upgrade -y && apt-get install -y \
  git \
  libtool \
  wget \
- cmake
+ cmake \
+ lcov
 
 # Install Java.
 RUN \

@@ -22,7 +22,8 @@ RUN yum install -y \
  libcppunit-dev \
  subversion \
  libtool \
- cmake
+ cmake \
+ lcov
 
 # Install a reasonably recent version of git
 RUN yum install -y \
