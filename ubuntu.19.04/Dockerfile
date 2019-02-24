@@ -8,16 +8,21 @@ RUN apt-get update && apt-get upgrade -y && apt-get install -y \
  net-tools \
  python \
  python-dev \
+ python-pip \
+ python3-pip \
  software-properties-common \
  automake \
  autoconf \
  libcppunit-dev \
+ libncurses5-dev \
  subversion \
  git \
  libtool \
  wget \
  cmake \
- lcov
+ lcov \
+ && pip2 install --upgrade pip && pip2 install --upgrade virtualenv && pip2 install pipenv \
+ && pip3 install --upgrade pip && pip3 install --upgrade virtualenv && pip3 install pipenv
 
 # Install Java.
 RUN \
