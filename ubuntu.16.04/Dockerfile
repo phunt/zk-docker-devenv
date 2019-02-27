@@ -8,10 +8,12 @@ RUN apt-get update && apt-get upgrade -y && apt-get install -y \
  net-tools \
  python \
  python-dev \
+ python-pip \
  software-properties-common \
  automake \
  autoconf \
  libcppunit-dev \
+ libncurses5-dev \
  subversion \
  git \
  libtool \
