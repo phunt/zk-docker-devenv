@@ -1,5 +1,7 @@
 FROM ubuntu:16.04
 
+ENV DEBIAN_FRONTEND="noninteractive"
+
 # Setup a build environment
 RUN apt-get update && apt-get upgrade -y && apt-get install -y \
  build-essential \
